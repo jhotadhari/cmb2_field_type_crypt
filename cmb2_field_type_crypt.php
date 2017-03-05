@@ -41,7 +41,7 @@ function cmb2_crypt_render_callback( $field, $escaped_value, $object_id, $object
     
     // render field
 	echo $field_type_object->input( array( 
-		// 'type' => 'password' 
+		'type' => 'password'
 		) );
     
 }
