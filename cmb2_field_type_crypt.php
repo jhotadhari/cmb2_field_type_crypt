@@ -146,7 +146,8 @@ function cmb2_crypt_key_validate( $string ){
  */
 function cmb2_crypt_key_convert_valid( $string ){
 	if (! gettype( $string ) === 'sting') return false;
-	return substr( array_shift( unpack('H*', $string) ), 0, 64 );
+	$string_unpacked = unpack('H*', $string );
+	return substr( array_shift( $string_unpacked ), 0, 64 );
 }
 
 ?>
